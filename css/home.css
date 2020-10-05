@@ -485,6 +485,8 @@ button {
   padding: 0 0.3rem 0 0.3rem;
   color: #343434;
   font-size: 1rem;
+  min-height: 64px;
+  max-height: 4vh;
 }
 
 #nav .menu .drop-item button {
