@@ -219,6 +219,7 @@ header {
             line-height: 2.4rem;
             letter-spacing: -0.3px;
             font-weight: 400;
+            margin-bottom: 0.3rem;
         }
 
         ul {
@@ -247,12 +248,11 @@ header {
             .step {
                 @include flex-center;
                 flex-direction: column;
-                height: 17rem;
+                min-height: 17rem;
                 width: 22rem;
                 padding: 1rem;
                 text-align: center;
                 color: #343434;
-
                 img {
                     width: 100%;
                 }
@@ -268,6 +268,9 @@ header {
                 p {
                     padding: 0;
                     font-weight: 300;
+                }
+                @media screen and (max-width: 500px){
+                    flex-basis: 80%;
                 }
             }
         }
@@ -332,12 +335,13 @@ header {
 
             img {
                 min-width: 50%;
+                min-height: fit-content;
             }
 
             .text-area {
-                flex: 50%;
+                min-width: 50%;
                 padding: 1rem;
-
+                font-size: 2vh;
                 li {
                     display: flex;
                     padding: 1rem 0;
@@ -573,7 +577,6 @@ header {
 
 .section-5 {
     height: auto;
-    padding: 1rem;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -583,6 +586,7 @@ header {
         margin: 0 auto;
         height: auto;
         max-width: 1200px;
+        min-width: auto;
         @include flex-center;
         flex-direction: column;
         flex-wrap: wrap;
@@ -733,13 +737,13 @@ header {
         justify-content: center;
         align-items: flex-start;
         .link-lists {
-            flex: 60%;
+            flex: 50%;
             display: flex;
 
             #app-dwnload-btn {
                 button {
                     display: none;
-                    @media screen and (max-width: 500px) {
+                    @media screen and (max-width: 770px) {
                         display: block;
                         padding: 0.75rem 2rem;
                         border: 1px solid $primary-color;
@@ -774,7 +778,7 @@ header {
                         font-family: "Source Sans Pro", "Trebuchet MS", Helvetica, sans-serif;
                         padding-bottom: 0.6rem;
 
-                        @media screen and (max-width: 500px) {
+                        @media screen and (max-width: 7700px) {
                             padding-bottom: 0rem;
                         }
                     }
@@ -784,7 +788,7 @@ header {
                         color: $primary-color;
                         font-size: 2rem;
 
-                        @media screen and (max-width: 500px) {
+                        @media screen and (max-width: 770px) {
                             visibility: visible;
                             position: absolute;
                             bottom: -12px;
@@ -807,7 +811,7 @@ header {
                             padding: 0.3rem 0;
                         }
                     }
-                    @media screen and (max-width: 500px) {
+                    @media screen and (max-width: 770px) {
                         display: none;
                         &.activated {
                             display: block;
@@ -857,13 +861,13 @@ header {
 
             }
 
-            @media screen and (max-width: 500px) {
+            @media screen and (max-width: 770px) {
                 display: none;
             }
         }
     }
 
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 770px) {
         padding: 0;
     }
 }
@@ -893,8 +897,6 @@ footer {
 
         .footer-links {
             flex: 45%;
-            justify-self: flex-start;
-
             a {
                 padding: 0 0.3rem;
                 text-decoration: underline;
@@ -904,6 +906,9 @@ footer {
                 line-height: 1.26rem;
                 color: rgb(103, 103, 103);
                 font-family: "Source Sans Pro", "Trebuchet MS", Helvetica, sans-serif;
+            }
+            @media screen and (max-width: 770px) {
+                margin: 0 auto;
             }
         }
 
@@ -929,6 +934,12 @@ footer {
             #instagram {
                 color: rgb(138, 58, 185);
             }
+        }
+
+        @media screen and (max-width: 770px) {
+            width: auto;
+            justify-content: center;
+            text-align: center ;
         }
     }
     @media screen and (max-width: 400px) {

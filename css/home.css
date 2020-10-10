@@ -98,7 +98,7 @@
     font-weight: 100;
   }
   .container {
-    width: 100vw;
+    width: 100%;
     padding: 2rem;
   }
   .container .steps {
@@ -122,15 +122,12 @@
 }
 
 @media screen and (max-width: 1024px) {
-  #collapse-link1 {
-    display: none;
-  }
   header {
     background-image: url("../img/home/hero1199x650.jpg");
-    background-size: cover;
-    background-repeat: repeat;
-    background-position: center center;
     min-height: 650px;
+  }
+  #collapse-link1 {
+    display: none;
   }
   .section-5 {
     background-image: url("../img/home/bottom_banner_1024px.jpg");
@@ -173,7 +170,7 @@
     transform: translateX(0);
   }
   .mobile-nav .mobile-nav-menu {
-    width: 100vw;
+    width: 35%;
     padding: 1rem;
     background-color: #fff;
   }
@@ -223,6 +220,21 @@
     border-top: solid 1px #e8e8e8;
     border-bottom: solid 1px #e8e8e8;
   }
+}
+
+@media screen and (max-width: 770px) and (max-width: 550px) {
+  .mobile-nav .mobile-nav-menu {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 770px) and (max-width: 400px) {
+  .mobile-nav .mobile-nav-menu {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 770px) {
   .mobile-nav .mobile-body {
     width: 65%;
     background-color: #343434;
@@ -251,115 +263,34 @@
   }
   .section-1 .container .steps {
     padding: 0;
-    flex-wrap: wrap;
     margin-bottom: 1.5rem;
+    flex-wrap: wrap;
     min-height: auto;
   }
   .section-1 .container .steps .step {
-    min-width: 90%;
-    min-height: 400px;
+    min-width: auto;
+    flex-basis: 45%;
+    min-height: 350px;
   }
   .section-1 .container .steps .step img {
     width: 100%;
   }
-  .section-2 .container {
-    padding: 1rem;
+  .section-2 .container .value-area {
+    flex-direction: column;
   }
-  .section-2 .container #main-image {
-    max-width: 30%;
-  }
-  .section-2 .container .text-area {
-    padding: 0.5rem;
-    min-width: auto;
-    font-size: 1rem;
+  .section-2 .container .value-area #main-image {
+    min-width: 90%;
   }
   .section-3 .container {
     padding: 0;
   }
   .section-3 .container .cards {
-    width: 200vw;
-    overflow-x: scroll;
-    scroll-behavior: smooth;
+    width: 100%;
     margin-top: 1rem;
   }
   .section-5 {
     background-image: url("../img/home/bottom_banner_tablet.jpg");
     background-size: cover;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  nav .logo {
-    margin-left: 35%;
-  }
-  header {
-    background-image: url("../img/home/Hero-mobile-small.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: auto;
-    padding: 2rem;
-  }
-  header h1 {
-    text-align: center;
-    margin-top: 2rem;
-    font-size: 1rem;
-  }
-  header h1 span {
-    padding-top: 0.5rem;
-  }
-  header p {
-    margin: 0;
-    min-width: 70%;
-    font-size: 1rem;
-  }
-  .section-1 .container {
-    padding: 0;
-  }
-  .section-1 .container h2 {
-    margin-bottom: 1rem;
-  }
-  .section-1 .steps {
-    margin: 1rem 0 1rem 0;
-  }
-  .section-1 .steps .step {
-    min-width: 80%;
-  }
-  .section-2 .value-area {
-    flex-direction: column;
-  }
-  .section-2 .value-area #main-image {
-    min-width: 90%;
-  }
-  .section-4 .container {
-    padding: 1rem;
-  }
-  .section-4 .container .reviews {
-    flex-direction: column;
-  }
-  .section-4 .container .reviews :nth-child(odd) {
-    margin-bottom: 1rem;
-  }
-  .section-4 .container .reviews .review img {
-    height: 22px;
-    width: 25px;
-  }
-  .section-5 {
-    background-image: url("../img/home/bottom_banner_mobile.jpg");
-    background-size: contain;
-    background-position: 400px center;
-    background-repeat: no-repeat;
-  }
-  .section-5 .container {
-    padding: 0;
-  }
-  .section-5 .container .text-area h3 {
-    font-size: 1rem;
-  }
-  .section-5 .container .text-area p {
-    font-size: 0.75rem;
-  }
-  .section-6 p {
-    font-size: 0.8rem;
   }
   .section-7 {
     padding: 0;
@@ -402,6 +333,84 @@
   }
   footer .container .footer-links {
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  nav .logo {
+    margin-left: 35%;
+  }
+  header {
+    background-image: url("../img/home/Hero-mobile-small.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto;
+    padding: 2rem;
+  }
+  header h1 {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1rem;
+  }
+  header h1 span {
+    padding-top: 0.5rem;
+  }
+  header p {
+    margin: 0;
+    min-width: 70%;
+    font-size: 1rem;
+  }
+  .section-1 .container {
+    padding: 0;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .section-1 .container h2 {
+    margin-bottom: 1rem;
+  }
+  .section-1 .steps {
+    margin: 1rem 0 1rem 0;
+  }
+  .section-1 .steps .step {
+    flex-basis: 90%;
+    min-width: 80%;
+  }
+  .section-2 .value-area {
+    flex-direction: column;
+  }
+  .section-2 .value-area #main-image {
+    min-width: 90%;
+  }
+  .section-4 .container {
+    padding: 1rem;
+  }
+  .section-4 .container .reviews {
+    flex-direction: column;
+  }
+  .section-4 .container .reviews :nth-child(odd) {
+    margin-bottom: 1rem;
+  }
+  .section-4 .container .reviews .review img {
+    height: 22px;
+    width: 25px;
+  }
+  .section-5 {
+    background-image: url("../img/home/bottom_banner_mobile.jpg");
+    background-size: contain;
+    background-position: 400px center;
+    background-repeat: no-repeat;
+  }
+  .section-5 .container {
+    padding: 0;
+  }
+  .section-5 .container .text-area h3 {
+    font-size: 1rem;
+  }
+  .section-5 .container .text-area p {
+    font-size: 0.75rem;
+  }
+  .section-6 p {
+    font-size: 0.8rem;
   }
 }
 
@@ -631,6 +640,7 @@ header button:hover {
   line-height: 2.4rem;
   letter-spacing: -0.3px;
   font-weight: 400;
+  margin-bottom: 0.3rem;
 }
 
 .section-1 .container ul {
@@ -662,7 +672,7 @@ header button:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 17rem;
+  min-height: 17rem;
   width: 22rem;
   padding: 1rem;
   text-align: center;
@@ -684,6 +694,12 @@ header button:hover {
 .section-1 .container .steps .step p {
   padding: 0;
   font-weight: 300;
+}
+
+@media screen and (max-width: 500px) {
+  .section-1 .container .steps .step {
+    flex-basis: 80%;
+  }
 }
 
 .section-1 .container button {
@@ -751,11 +767,13 @@ header button:hover {
 
 .section-2 .container .value-area img {
   min-width: 50%;
+  min-height: fit-content;
 }
 
 .section-2 .container .value-area .text-area {
-  flex: 50%;
+  min-width: 50%;
   padding: 1rem;
+  font-size: 2vh;
 }
 
 .section-2 .container .value-area .text-area li {
@@ -990,7 +1008,6 @@ header button:hover {
 
 .section-5 {
   height: auto;
-  padding: 1rem;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -1001,6 +1018,7 @@ header button:hover {
   margin: 0 auto;
   height: auto;
   max-width: 1200px;
+  min-width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1164,7 +1182,7 @@ header button:hover {
 }
 
 .section-7 .container .link-lists {
-  flex: 60%;
+  flex: 50%;
   display: flex;
 }
 
@@ -1172,7 +1190,7 @@ header button:hover {
   display: none;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 770px) {
   .section-7 .container .link-lists #app-dwnload-btn button {
     display: block;
     padding: 0.75rem 2rem;
@@ -1209,7 +1227,7 @@ header button:hover {
   padding-bottom: 0.6rem;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 7700px) {
   .section-7 .container .link-lists .list .list-toggle h4 {
     padding-bottom: 0rem;
   }
@@ -1221,7 +1239,7 @@ header button:hover {
   font-size: 2rem;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 770px) {
   .section-7 .container .link-lists .list .list-toggle span {
     visibility: visible;
     position: absolute;
@@ -1244,7 +1262,7 @@ header button:hover {
   padding: 0.3rem 0;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 770px) {
   .section-7 .container .link-lists .list .site-links {
     display: none;
   }
@@ -1294,13 +1312,13 @@ header button:hover {
   width: 9rem;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 770px) {
   .section-7 .container .app-dwnload {
     display: none;
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 770px) {
   .section-7 {
     padding: 0;
   }
@@ -1334,7 +1352,6 @@ footer .container .copy-right {
 
 footer .container .footer-links {
   flex: 45%;
-  justify-self: flex-start;
 }
 
 footer .container .footer-links a {
@@ -1346,6 +1363,12 @@ footer .container .footer-links a {
   line-height: 1.26rem;
   color: #676767;
   font-family: "Source Sans Pro", "Trebuchet MS", Helvetica, sans-serif;
+}
+
+@media screen and (max-width: 770px) {
+  footer .container .footer-links {
+    margin: 0 auto;
+  }
 }
 
 footer .container .social-media {
@@ -1368,6 +1391,14 @@ footer .container .social-media #twitter {
 
 footer .container .social-media #instagram {
   color: #8a3ab9;
+}
+
+@media screen and (max-width: 770px) {
+  footer .container {
+    width: auto;
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 400px) {
