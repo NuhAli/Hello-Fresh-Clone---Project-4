@@ -173,6 +173,21 @@
     }
 }
 
+@media screen and (max-width: 900px) {
+    .section-2 {
+        .container {
+            .value-area {
+                flex-direction: column;
+    
+                #main-image {
+                    max-width: 90%;
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 770px) {
     nav {
         .burger-icon {
@@ -330,18 +345,6 @@
                     img {
                         width: 100%;
                     }
-                }
-            }
-        }
-    }
-
-    .section-2 {
-        .container {
-            .value-area {
-                flex-direction: column;
-    
-                #main-image {
-                    min-width: 90%;
                 }
             }
         }
