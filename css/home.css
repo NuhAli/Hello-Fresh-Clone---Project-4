@@ -498,8 +498,8 @@ button {
   padding: 0 0.3rem 0 0.3rem;
   color: #343434;
   font-size: 1rem;
-  min-height: 64px;
   max-height: 4vh;
+  min-height: 60px;
 }
 
 #nav .menu .drop-item button {
@@ -530,7 +530,6 @@ button {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   min-width: 12rem;
   background-color: #fff;
-  min-height: auto;
 }
 
 #nav .menu .drop-item .drop-list li {
